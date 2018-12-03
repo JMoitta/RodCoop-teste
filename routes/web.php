@@ -19,6 +19,11 @@ Route::get('/', function () {
     return view('welcome'); //helper
 });
 
+Route::get('/for-if/{value}', function($value) {
+    return view('for-if')
+        ->with('value', $value);
+});
+
 Route::get('/blade', function() {
     $nome = "Luiz Carlos";
     $variavel1 = "valor1";
