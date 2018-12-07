@@ -20,6 +20,12 @@
     @endphp
 @endwhile
 
-@foreach ($myArray as $value)
-    
+@foreach ($myArray as $key => $value)
+    <p>{{ $loop->index }} {{$key }} - {{ $value }}</p>
 @endforeach
+
+@forelse ([] as $key => $value)
+    <p>{{ $loop->index }} {{$key }} - {{ $value }}</p>
+@empty
+    <p>Nenhum registro encontrado.</p>
+@endforelse

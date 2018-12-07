@@ -21,7 +21,12 @@ Route::get('/', function () {
 
 Route::get('/for-if/{value}', function($value) {
     return view('for-if')
-        ->with('value', $value);
+        ->with('value', $value)
+        ->with('myArray', [
+            'chave1' => 'valor1',
+            'chave2' => 'valor2',
+            'chave3' => 'valor3',
+        ]);
 });
 
 Route::get('/blade', function() {
