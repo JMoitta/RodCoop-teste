@@ -13,6 +13,13 @@
 @php
     $i = 0;
 @endphp
-@while ()
-    - {{ $i}}
+@while ($i < $value)
+    - {{ $i + 1}}
+    @php
+        $i++;
+    @endphp
 @endwhile
+
+@foreach ($myArray as $value)
+    
+@endforeach
