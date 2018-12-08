@@ -19,10 +19,23 @@ Route::get('/', function () {
     return view('welcome'); //helper
 });
 
-Route::get('/controller/cliente/cadastrar', 'ClientsController@cadastrar');
+Route::group(['prefix' => '/'], function () {
+    Route::get('/cliente/cadastrar', 'ClientsController@cadastrar');
+});
 
-Route::get('/video-11', function () {
-    return view('aula.video-11');
+Route::group(['prefix' => '/admin'], function () {
+    Route::group(['prefix' => '/cliente'], function () {
+        Route::get('cadastrar', 'ClientsController@cadastrar');
+    });
+});
+
+/*Route::get('/controller/cliente/cadastrar', 'ClientsController@cadastrar');
+Route::get('/controller/cliente/cadastrar', 'ClientsController@cadastrar');
+Route::get('/controller/cliente/cadastrar', 'ClientsController@cadastrar');
+Route::get('/controller/cliente/cadastrar', 'ClientsController@cadastrar');*/
+
+Route::get('/video-{num}', function ($num) {
+    return view('aula.video-'. $num);
 });
 
 Route::get('/for-if/{value}', function($value) {

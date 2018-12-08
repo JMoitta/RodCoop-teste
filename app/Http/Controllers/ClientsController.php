@@ -11,7 +11,7 @@ class ClientsController extends Controller
         $nome = "Luiz Carlos";
     $variavel1 = "valor1";
 
-    return view('cliente.cadastrar')
+    return view('admin.cliente.cadastrar')
         ->with('nome', $nome)
         ->with('variavel1', $variavel1);
     }
