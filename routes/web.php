@@ -19,6 +19,12 @@ Route::get('/', function () {
     return view('welcome'); //helper
 });
 
+Route::get('/controller/cliente/cadastrar', 'ClientsController@cadastrar');
+
+Route::get('/video-11', function () {
+    return view('aula.video-11');
+});
+
 Route::get('/for-if/{value}', function($value) {
     return view('for-if')
         ->with('value', $value)
