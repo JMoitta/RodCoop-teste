@@ -21,6 +21,9 @@ Route::get('/', function () {
 
 Route::group(['prefix' => '/'], function () {
     Route::get('/cliente/cadastrar', 'ClientsController@cadastrar');
+    Route::get('env', function() {
+        var_dump(getEnv('NOME'));        
+    });
 });
 
 Route::group(['prefix' => '/admin'], function () {
