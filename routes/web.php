@@ -27,9 +27,10 @@ Route::group(['prefix' => '/'], function () {
 });
 
 Route::group(['prefix' => '/admin'], function () {
-    Route::group(['prefix' => '/cliente'], function () {
+    Route::get('client', 'ClientsController@listar');
+    /*Route::group(['prefix' => '/cliente'], function () {
         Route::get('cadastrar', 'ClientsController@cadastrar');
-    });
+    });*/
 });
 
 /*Route::get('/controller/cliente/cadastrar', 'ClientsController@cadastrar');
