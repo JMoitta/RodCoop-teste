@@ -19,6 +19,10 @@ Route::get('/', function () {
     return view('welcome'); //helper
 });
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 Route::group(['prefix' => '/'], function () {
     Route::get('/client/cadastrar', 'ClientsController@cadastrar');
     Route::get('env', function() {
