@@ -59,4 +59,14 @@ class ClientsController extends Controller
       ->with('nome', $nome)
       ->with('variavel1', $variavel1);
   }*/
+  
+  public function excluir(Request $request, $id)
+  {
+    $client = Client::find($id);
+    if(!$client) {
+      abort(404);
+    }
+    $client->delete();
+    return redirect()->to('/admin/client');
+  }
 }
