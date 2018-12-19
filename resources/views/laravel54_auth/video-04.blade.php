@@ -9,6 +9,8 @@
 
 <h3>Cokkies</h3>
 <p>Guardado no browser do cliente</p>
+
+<h3>CMD</h3>
 <p>Comandos ultilizados</p>
 <ul>
     <li>php artisan serve</li>
