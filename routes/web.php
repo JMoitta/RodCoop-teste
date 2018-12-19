@@ -30,6 +30,10 @@ Route::group(['prefix' => '/'], function () {
     });
 });
 
+Route::get('/laravel54-auth/{num}', function ($num) {
+    return view('laravel54_auth.video-'. $num);
+});
+
 Route::group(['prefix' => '/admin'], function () {
     Route::get('client', 'ClientsController@listar');
     Route::get('/client/form-cadastrar', 'ClientsController@formCadastrar');
