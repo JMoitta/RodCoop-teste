@@ -15,6 +15,5 @@
 <h3>CMD</h3>
 <ul>
   <li>php artisan serve</li>
-  <li><b>composer require caouecs/laravel-lang</b> (Obs.: biblioteca de tradução da aplicação)</li>
   <li>php artisan make:notification MyResetPasswordNotification</li>
 </ul>
