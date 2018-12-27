@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\User;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
@@ -41,5 +42,20 @@ class LoginController extends Controller
     public function redirectTo()
     {
         return \Auth::user()->role == User::ROLE_ADMIN ? '/admin/home' : '/home';
+    }
+
+     /**
+     * Log the user out of the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function logout(Request $request)
+    {
+        $this->guard()->logout();
+
+        $request->session()->invalidate();
+
+        return redirect($request->is('admin/*') ? '/admin/login' : '/login');
     }
 }
