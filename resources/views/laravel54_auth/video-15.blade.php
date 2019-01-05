@@ -2,7 +2,7 @@
 
 <h3>CMD</h3>
 <ul>
-  <li>composer require laravel/socialite</li>
+  <li>composer require laravel/socialite:^3.0</li>
 </ul>
 
 <h3>app.php</h3>
