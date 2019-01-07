@@ -50,6 +50,14 @@ Route::group(['middleware' => 'guest'], function () {
     });
 });
 
+Route::get('/auth', function (\Illuminate\Http\Request $request) {
+    // dd($request->user());
+    // dd(\Auth::user());
+    // dd(\Auth::check());
+    // dd(\Auth::id());
+    // \Auth::loginUsingId();
+});
+
 Route::group(['prefix' => '/'], function () {
     Route::get('/client/cadastrar', 'ClientsController@cadastrar');
     Route::get('env', function() {
