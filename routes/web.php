@@ -44,6 +44,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
     Route::get('/login/callback', 'Auth\LoginController@loginCallback');
 });
 
+Route::group(['middleware' => 'guest'], function () {
+    Route::get('/test', function () {
+        echo "Olá Mundo!";
+    });
+});
+
 Route::group(['prefix' => '/'], function () {
     Route::get('/client/cadastrar', 'ClientsController@cadastrar');
     Route::get('env', function() {
