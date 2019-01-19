@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -70,9 +71,33 @@
             </div>
         </nav>
 
-        @yield('content')
     </div>
-
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar nav-default">
+                        <li><a href="">Manter</a></li>
+                        <li><a href="">Manter</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Dashboard</div>
+    
+                    <div class="panel-body">
+                        @if (session('status'))
+                            <div class="alert alert-success">
+                                {{ session('status') }}
+                            </div>
+                        @endif
+    
+                        You are logged in!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @yield('content')
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
