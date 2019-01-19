@@ -62,7 +62,7 @@
                         </div>
                     </form>
                     <form action="{{ url('/login/social') }}">
-                        @csrf
+                        {{ csrf_field() }}
                         <div class="col-md-12 text-center">
                             <button type="submit" class="btn danger" value="google" name="social_type">
                                 Login with Google
