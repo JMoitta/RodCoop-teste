@@ -20,6 +20,8 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::post('/login/social', 'Auth\LoginController@loginSocial');
+Route::get('/login/callback', 'Auth\LoginController@loginCallback');
 
 Route::get('dev/admin', function () {
     return view('layouts.dev.admin');
@@ -41,6 +43,23 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
     Route::group(['middleware' => 'can:admin'], function () {
         $this->get('/home', 'HomeController@index')->name('home');
     });
+    
+    Route::post('/login/social', 'Auth\LoginController@loginSocial');
+    Route::get('/login/callback', 'Auth\LoginController@loginCallback');
+});
+
+Route::group(['middleware' => 'guest'], function () {
+    Route::get('/test', function () {
+        echo "Olá Mundo!";
+    });
+});
+
+Route::get('/auth', function (\Illuminate\Http\Request $request) {
+    // dd($request->user());
+    // dd(\Auth::user());
+    // dd(\Auth::check());
+    // dd(\Auth::id());
+    // \Auth::loginUsingId();
 });
 
 Route::group(['prefix' => '/'], function () {

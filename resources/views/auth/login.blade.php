@@ -61,11 +61,14 @@
                             </div>
                         </div>
                     </form>
-                    <form action="{{ url('/login/social') }}">
+                    <form class="form-inline" method="POST" action="{{ url('/login/social') }}">
                         {{ csrf_field() }}
                         <div class="col-md-12 text-center">
-                            <button type="submit" class="btn danger" value="google" name="social_type">
+                            <button type="submit" class="btn btn-danger" value="google" name="social_type">
                                 Login with Google
+                            </button>
+                            <button type="submit" class="btn" value="github" name="social_type">
+                                Login with Github
                             </button>
                         </div>
                     </form>
