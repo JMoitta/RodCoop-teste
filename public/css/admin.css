@@ -8,6 +8,16 @@ body {
     background: #f2f7fb;
 }
 
+a:focus, a:hover {
+    text-decoration: none;
+    color: #4099ff;
+}
+
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
 .navbar-theme {
     background: #fff !important;
 }
@@ -64,6 +74,62 @@ body {
     box-shadow: 0 2px 4px 0 rgba(43,43,43,.1);
 }
 
+.pcoded-main-container {
+    clear: both;
+}
+
+.pcoded-main-container {
+    display: block;
+    position: relative;
+    background: #f2f7fb;
+    min-height: calc(100vh - 70px);
+}
+
+.page-header {
+    background-size: cover;
+    position: relative;
+    margin: 30px 35px 15px;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.page-header h5{
+    margin-bottom: 0px;
+}
+
+.page-header h5+span {
+    font-size: 13px;
+}
+
+.breadcrumb {
+    background-color: transparent;
+    margin-bottom: 0;
+}
+
+.page-header .breadcrumb {
+    background: 0 0;
+    margin-bottom: 0;
+    float: right;
+}
+
+.page-header .breadcrumb a {
+    font-size: 13px;
+}
+
+.pcoded-content {
+    position: relative;
+    display: block;
+}
+
+.pcoded-inner-content {
+    padding: 10px;
+}
+
+.pcoded-main-container {
+
+}
 @media (min-width: 768px) {
     .sidebar {
         position: fixed;

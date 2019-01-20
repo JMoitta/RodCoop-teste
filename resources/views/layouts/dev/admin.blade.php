@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
+    <link href="{{ asset('open-iconic-master/font/css/open-iconic-bootstrap.css') }}" rel="stylesheet">
     <title>Hello, world!</title>
   </head>
   <body>
@@ -26,7 +27,9 @@
                     <a class="nav-link" href="#">Link</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
+                    <a class="nav-link" href="#">
+                        <span class="oi oi-bell"></span>
+                    </a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -71,6 +74,48 @@
                 </ul>
             </div>
             <div class="col content">
+                <div class="page-header ">
+                    <div class="row align-items-end">
+                        <div class="col-lg-8">
+                            <div class="page-header-title">
+                                <div class="d-inline">
+                                    <h5>Modal</h5>
+                                    <span>lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="page-header-breadcrumb">
+                                <ul class=" breadcrumb breadcrumb-title">
+                                    <li class="breadcrumb-item">
+                                        <a href="index.html"><i class="oi oi-home"></i></a>
+                                    </li>
+                                    <li class="breadcrumb-item">
+                                        <a href="#!">Advance Components</a>
+                                    </li>
+                                    <li class="breadcrumb-item">
+                                        <a href="#!">Modal</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pcoded-inner-content">
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <div class="page-body">
+                                <div class="row">
+                                    <div class="col-ss-12">
+                                        <div class="card">
+                                            d
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="card">
                     <div class="card-body">
                         This is some text within a card body.
