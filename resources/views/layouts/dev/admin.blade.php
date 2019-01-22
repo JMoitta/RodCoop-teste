@@ -102,13 +102,18 @@
                     </div>
                 </div>
                 <div class="row pcoded-inner-content">
-                    <div class="main-body">
+                    <div class="col main-body">
                         <div class="page-wrapper">
                             <div class="page-body">
                                 <div class="row">
-                                    <div class="col-ss-12">
+                                    <div class="col-sm-12">
                                         <div class="card">
-                                            d
+                                            <div class="card-header">
+                                                <h5>Static Example</h5>
+                                            </div>
+                                            <div class="card-body">
+
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
