@@ -27,6 +27,7 @@ Route::group([
     'prefix' => 'admin',
     'namespace' => 'Admin'], function () {
     Route::resource('administrative-regions', 'AdministrativeRegionController');
+    Route::resource('cooperators', 'CooperatorController');
 });
 
 Route::get('dev/admin', function () {
