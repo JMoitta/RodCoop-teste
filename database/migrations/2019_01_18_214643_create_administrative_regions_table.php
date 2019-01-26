@@ -15,6 +15,7 @@ class CreateAdministrativeRegionsTable extends Migration
     {
         Schema::create('administrative_regions', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('description');
             $table->timestamps();
         });
     }

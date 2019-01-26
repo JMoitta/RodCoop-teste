@@ -23,6 +23,12 @@ Auth::routes();
 Route::post('/login/social', 'Auth\LoginController@loginSocial');
 Route::get('/login/callback', 'Auth\LoginController@loginCallback');
 
+Route::group([
+    'prefix' => 'admin',
+    'namespace' => 'Admin'], function () {
+    Route::resource('administrative-regions', 'AdministrativeRegionController');
+});
+
 Route::get('dev/admin', function () {
     return view('layouts.dev.admin');
 });
