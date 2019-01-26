@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
-    <h3>Novo cliente</h3>
+    <h3>Nova região administrativa</h3>
     @include('form._form_errors')
     <form method="POST" action="{{ route('administrative-regions.store') }}">
         @include('admin.administrativeRegion._form')

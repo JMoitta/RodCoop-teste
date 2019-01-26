@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
-    <h3>Novo cliente</h3>
+    <h3>Novo cooperador</h3>
     @include('form._form_errors')
     <form method="POST" action="{{ route('cooperators.store') }}">
         @include('admin.cooperators._form')

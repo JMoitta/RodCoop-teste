@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
-  <h3>Listagem das regiões administrativas</h3>
+  <h3>Lista das regiões administrativas</h3>
   <br/><br/>
   <a class="btn btn-default" href="{{ route('administrative-regions.create') }}">Criar novo</a>
   <table class="table table-striped">
