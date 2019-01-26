@@ -28,7 +28,7 @@ class AdministrativeRegionController extends Controller
     public function create()
     {
         $administrativeRegion = new AdministrativeRegion();
-        return view('admin.administrativeRegion.create', compact('administrativeRegion'));
+        return \view('admin.administrativeRegion.create', \compact('administrativeRegion'));
     }
 
     /**
@@ -41,7 +41,6 @@ class AdministrativeRegionController extends Controller
     {
         $data = $this->_validate($request);
         AdministrativeRegion::create($data);
-        
         return redirect()->route('administrative-regions.index');
     }
 
@@ -53,7 +52,7 @@ class AdministrativeRegionController extends Controller
      */
     public function show(AdministrativeRegion $administrativeRegion)
     {
-        return view('admin.administrativeRegion.show', compact('administrativeRegion'));
+        return \view('admin.administrativeRegion.show', \compact('administrativeRegion'));
     }
 
     /**
@@ -64,7 +63,7 @@ class AdministrativeRegionController extends Controller
      */
     public function edit(AdministrativeRegion $administrativeRegion)
     {
-        return view('admin.administrativeRegion.edit', compact('administrativeRegion'));
+        return \view('admin.administrativeRegion.edit', \compact('administrativeRegion'));
     }
 
     /**
@@ -79,7 +78,6 @@ class AdministrativeRegionController extends Controller
         $data = $this->_validate($request);
         $administrativeRegion->fill($data);
         $administrativeRegion->save();
-
         return redirect()->route('administrative-regions.index');
     }
 

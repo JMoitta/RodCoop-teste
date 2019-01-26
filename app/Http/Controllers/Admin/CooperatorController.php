@@ -28,7 +28,7 @@ class CooperatorController extends Controller
     public function create()
     {
         $cooperator = new Cooperator();
-        return view('admin.cooperators.create', compact('cooperator'));
+        return \view('admin.cooperators.create', \compact('cooperator'));
     }
 
     /**
@@ -41,7 +41,6 @@ class CooperatorController extends Controller
     {
         $data = $this->_validate($request);
         Cooperator::create($data);
-        
         return redirect()->route('cooperators.index');
     }
 
@@ -53,7 +52,7 @@ class CooperatorController extends Controller
      */
     public function show(Cooperator $cooperator)
     {
-        return view('admin.cooperators.show', compact('cooperator'));
+        return \view('admin.cooperators.show', \compact('cooperator'));
     }
 
     /**
@@ -64,7 +63,7 @@ class CooperatorController extends Controller
      */
     public function edit(Cooperator $cooperator)
     {
-        return view('admin.cooperators.edit', compact('cooperator'));
+        return \view('admin.cooperators.edit', \compact('cooperator'));
     }
 
     /**
@@ -79,7 +78,6 @@ class CooperatorController extends Controller
         $data = $this->_validate($request);
         $cooperator->fill($data);
         $cooperator->save();
-
         return redirect()->route('cooperators.index');
     }
 
