@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCooperatorsTable extends Migration
+class CreateListOfCastersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateCooperatorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('cooperators', function (Blueprint $table) {
+        Schema::create('list_of_casters', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('description');
+            $table->date('startDate');
+            $table->date('endDate');
             $table->integer('administrative_region_id')->unsigned();
             $table->foreign('administrative_region_id')->references('id')->on('administrative_regions');
             $table->timestamps();
@@ -29,6 +31,6 @@ class CreateCooperatorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cooperators');
+        Schema::dropIfExists('list_of_casters');
     }
 }

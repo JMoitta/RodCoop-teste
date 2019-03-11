@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Cooperator;
+use App\Models\AdministrativeRegion;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -28,7 +29,8 @@ class CooperatorController extends Controller
     public function create()
     {
         $cooperator = new Cooperator();
-        return \view('admin.cooperators.create', \compact('cooperator'));
+        $administrativeRegionsList = AdministrativeRegion::all();
+        return \view('admin.cooperators.create', \compact('cooperator', 'administrativeRegionsList'));
     }
 
     /**
@@ -63,7 +65,8 @@ class CooperatorController extends Controller
      */
     public function edit(Cooperator $cooperator)
     {
-        return \view('admin.cooperators.edit', \compact('cooperator'));
+        $administrativeRegionsList = AdministrativeRegion::all();
+        return \view('admin.cooperators.edit', \compact('cooperator', 'administrativeRegionsList'));
     }
 
     /**
@@ -95,10 +98,11 @@ class CooperatorController extends Controller
 
     protected function _validate(Request $request)
     {
-        $cooperators = $request->route('cooperators');
-        $cooperatorsId = $cooperators instanceof Cooperator ? "," . $cooperators->id : null;
+        $cooperator = $request->route('cooperator');
+        $cooperatorId = $cooperator instanceof Cooperator ? "," . $cooperator->id : null;
         $rules = [
-            'name' => "required|unique:cooperators,name$cooperators|max:255",
+            'name' => "required|unique:cooperators,name$cooperatorId|max:255",
+            'administrative_region_id' => "required|numeric|exists:administrative_regions,id",
         ];
         return $this->validate($request, $rules);
     }

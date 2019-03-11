@@ -17,7 +17,7 @@ use Illuminate\Http\Request;
 
 Route::get('/', function () {
     return view('welcome'); //helper
-});
+})->name('welcome');
 
 Auth::routes();
 Route::post('/login/social', 'Auth\LoginController@loginSocial');
@@ -28,6 +28,7 @@ Route::group([
     'namespace' => 'Admin'], function () {
     Route::resource('administrative-regions', 'AdministrativeRegionController');
     Route::resource('cooperators', 'CooperatorController');
+    Route::resource('praying-houses', 'PrayingHouseController');
 });
 
 Route::get('dev/admin', function () {

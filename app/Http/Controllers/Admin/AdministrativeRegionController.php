@@ -17,7 +17,7 @@ class AdministrativeRegionController extends Controller
     public function index()
     {
         $administrativeRegions = AdministrativeRegion::all();
-        return \view("admin.administrativeRegion.index", \compact('administrativeRegions') );
+        return \view("admin.administrativeRegions.index", \compact('administrativeRegions') );
     }
 
     /**
@@ -28,7 +28,7 @@ class AdministrativeRegionController extends Controller
     public function create()
     {
         $administrativeRegion = new AdministrativeRegion();
-        return \view('admin.administrativeRegion.create', \compact('administrativeRegion'));
+        return \view('admin.administrativeRegions.create', \compact('administrativeRegion'));
     }
 
     /**
@@ -52,7 +52,7 @@ class AdministrativeRegionController extends Controller
      */
     public function show(AdministrativeRegion $administrativeRegion)
     {
-        return \view('admin.administrativeRegion.show', \compact('administrativeRegion'));
+        return \view('admin.administrativeRegions.show', \compact('administrativeRegion'));
     }
 
     /**
@@ -63,7 +63,7 @@ class AdministrativeRegionController extends Controller
      */
     public function edit(AdministrativeRegion $administrativeRegion)
     {
-        return \view('admin.administrativeRegion.edit', \compact('administrativeRegion'));
+        return \view('admin.administrativeRegions.edit', \compact('administrativeRegion'));
     }
 
     /**

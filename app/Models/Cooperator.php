@@ -12,6 +12,6 @@ class Cooperator extends Model
      * @var array
      */
      protected $fillable = [
-        'name',
+        'name', 'administrative_region_id'
     ];
 }

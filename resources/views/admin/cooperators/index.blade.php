@@ -3,7 +3,7 @@
 @section('content')
   <h3>Lista dos cooperadores</h3>
   <br/><br/>
-  <a class="btn btn-default" href="{{ route('cooperators.create') }}">Criar novo</a>
+  <a class="btn btn-default" href="{{ route('cooperators.create') }}">Novo</a>
   <table class="table table-striped">
     <thead>
       <tr>
